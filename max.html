@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html{
+                scroll-behavior:smooth;
+                scroll-padding-top:115px;
+            }
+            body{
+                background-color:#bfaa7e;
+                margin:0;
+                padding:0;
+                padding-top:85px;
+                padding-bottom:100px;
+                font-family:'Open Sans';
+                color:#79C8EC;
+            }
+            .div_title{
+                display:flex;
+                width:100%;
+                justify-content:center;
+                align-items:center;
+                height:calc(100vh - 85px);
+                background-image:url('maxresdefault.jpg');
+                background-repeat:no-repeat;
+                background-size:cover;
+                background-position:bottom;
+                align-items:center;
+                flex-direction:column;
+            }
+            .title{
+                font-size:104px;
+                margin:0;
+                font-weight:bold;
+                color:#ccb297;
+            }
+            .navbar{
+                position:fixed;
+                top:0;
+                height:85px;
+                background-color:#3e455c;
+                right:0;
+                left:0;
+                z-index:100;
+                justify-content:space-between;
+                display:flex;
+                padding: 0 75px 0 25px;
+                align-items:center;
+            }
+            .navbar_first{
+                width:250px;
+                height:85px;
+                display:flex;
+                align-items:center;
+            }
+            .img_logo{
+                height:50px;
+                width:50px;
+                z-index:101;
+                margin-left:10px;
+            }
+            .navbar div p, .navbar div div p{
+                margin-left:10px;
+                font-size:24px;
+            }
+            .chrono_info{
+                width:600px;
+                display:grid;
+                height:85px;
+                margin-right:0;
+                grid-template-columns:150px 250px 175px;
+                grid-template-rows:85px;
+            }
+            .info_buttons{
+                transition: background-color 0.25s, color 0.25s;
+                display:flex;
+                height:85px;
+                justify-content:center;
+                align-items:center;
+            }
+            .info_buttons p{
+                font-size:24px;
+            }
+            .info_buttons:hover{
+                background-color:#79c8ec;
+                color:#3d455c;
+            }
+            .flex_moto{
+                height:75vh;
+                display:flex;
+                width:100vw;
+            }
+            .flex_moto div{
+                display:flex;
+            }
+            .div_moto{
+                flex:46;
+                height:75vh;
+                margin-right:5vw;
+                display:flex;
+                align-items:center;
+            }
+            .div_moto_logo p, .hello-world{
+                font-size:56px;
+                font-weight:600;
+                color:#856a4e;
+                margin-left:5vw;
+                text-decoration:underline;
+            }
+            .hello-world{
+                text-decoration:none;
+            }
+            .div_moto_logo{
+                flex:54;
+                align-items:center;
+                height:50vh;
+            }
+            .tired{
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                flex-direction:column;
+            }
+            .div_moto p{
+                font-size:22px;
+                color:#856a4e;
+                line-height:30px;
+            }
+            .title_tagline{
+                font-size:36px;
+                color:#ccb297;
+                font-weight:500;
+            }
+            .hr{
+                background-color:#856a4e;
+                border:none;
+                height:3px;
+            }
+            a, a:hover, a:active{
+                color:inherit;
+                text-decoration:inherit;
+            }
+            .idk{
+                width:100vw;
+                display:flex;
+                justify-content:center;
+            }
+            .flexible-box{
+                display:flex;
+                flex-direction:column;
+                height:160vh;
+            }
+            .flexible-box div{
+                flex:1;
+                display:flex;
+                width:100vw;
+            }
+            .flexible-box div div{
+                flex:1;
+                height:inherit;
+            }
+            .image{
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                border:solid 3px black;
+                border-left:none;
+            }
+            .bored{
+                display:flex;
+                border-right:none;
+                border:solid 3px black;
+                justify-content:center;
+            }
+            .sleepy{
+                flex:7;
+                color:#856a4e;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+            }
+            .tired p{
+                flex:13;
+                color:#856a4e;
+                font-size:24px;
+                padding: 0 28px;
+                text-align:center;
+            }
+            #J{
+                font-size:52px;
+                padding:6px 104px;
+                border: solid 3px #856a4e;
+            }
+        </style>
+        <title>
+            Chronos Ranch
+        </title>
+        <link rel="icon" type="image/x-icon" href="Screenshot_2024-02-15_11.16.37_AM-removebg-preview.png">
+    </head>
+    <body>
+        <div class="navbar">
+            <div class='navbar_first'>
+                <img src="Screenshot_2024-02-15_9.30.10_PM-removebg-preview.png" class='img_logo'>
+                <p>
+                    Chronos Ranch
+                </p>
+            </div>
+            <div class="chrono_info">
+                <a href='#moto' onmouseover='
+                document.getElementById("button_1").innerHTML = "- Our Motto -"
+                '
+                onmouseout='
+                document.getElementById("button_1").innerHTML = "Our Motto"
+                '>
+                    <div class="info_buttons">
+                        <p id='button_1'>
+                        Our Motto
+                        </p>
+                    </div>
+                </a>
+                <a href='#bad' onmouseover='
+                document.getElementById("button_2").innerHTML = "- Useful Information -"
+                '
+                onmouseout='
+                document.getElementById("button_2").innerHTML = "Useful Information"
+                '>
+                    <div class="info_buttons">
+                         <p id='button_2'>
+                            Useful Information
+                        </p>
+                    </div>
+                </a>
+                <a href='' onmouseover='
+                document.getElementById("button_3").innerHTML = "- Contact Us -"
+                '
+                onmouseout='
+                document.getElementById("button_3").innerHTML = "Contact Us"
+                '>
+                    <div class="info_buttons">
+                        <p id="button_3">
+                            Contact Us
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class='div_title'>
+            <p class='title'>
+                Chronos Ranch
+            </p>
+            <p class='title_tagline'>
+                Quick, Cheap, Reliable
+            </p>
+        </div>
+        <br>
+        <hr class="hr">
+        <hr class="hr">
+        <div class="flex_moto" id='moto'>
+            <div class="div_moto_logo">
+                <p>
+                    - Our Motto -
+                </p>
+            </div>
+            <div class="div_moto">
+                <p>
+                    - Here at Chronos Ranch, we work hard to deliver you the best, top-notch quality of beef, dairy, lamb, and poultry. 
+                    Our employees have pledged to never deliver a spoiled meal or damaged product, as they are very diligent in their craft.
+                    We here at Chronos Ranch have been shipping non-organic, GMO livestock for decades, starting back in Amarillo Texas, 1998. 
+                    Then, starting in the 2000s, we introduced new livestock in the form of sheep. After many years of dedication and perseverance
+                    we finally became the global cattle company we've been known as today. All that time, the motto,
+                    our motto we have worked by for over 30 years, is quick, cheap, and reliable. We maintain a relatively low price by 
+                    the usage of GMO organisms, using them to provide heaps of meat and dairy. Doing this we have a fast stream of fast, keeping prices
+                    a mininum, and always having a plenty amount of food to supply to our dear customers. That is our way at Chronos Ranch.
+                </p>
+            </div>
+        </div>
+        <hr class="hr" id="ME">
+        <hr class="hr" id="bad">
+        <br>
+        <div class="idk">
+            <p class="hello-world" id="HELP">
+                Additional Information
+            </p>
+        </div>
+        <br>
+        <hr class="hr">
+        <hr class="hr">
+        <div class="flexible-box" id="helpme">
+            <div>
+                <div class="image" style="
+                    flex-direction:column;
+                    ">
+                    <img src="Screenshot_2024-02-18_9.57.20_PM-removebg-preview.png" href="image-two" height="300px">
+                    <p style="
+                    color:#856a4e;
+                    font-size:18px;
+                    padding: 10px 42px;
+                    text-align:center;
+                    ">
+                        Our brand "CR" is easily distinguishable normal letters, Oxygen font, branded in the back-right of the cattle.
+                    </p>
+                </div>
+                <div class="tired">
+                    <p class="sleepy" id="J">
+                        Our Name
+                    </p>
+                    <p>
+                    Our name, 'Chronos Ranch', comes from kroʊnɒs, the Greek god of time, or the Greek word for time and ranch, 
+                    for the fact the company originated from a humble ranch. Focusing on the Chronos part, we(I) chose it because 
+                    Chronos, or time represents the refrigeration process we use to freeze our meat and send across the country
+                    into your local supermarket to store for 8 - 24 months. (And also how it's my 4th favorite word)
+                    </p>
+                </div>
+            </div>
+            <div>
+                <div class="tired">
+                    <p class="sleepy" id="J">
+                        Where to find Us
+                    </p>
+                    <p>
+                        You can find our brand at your local supermarkets, but if you want to find our ranch, go off of the ciity of Amarillo, south-west, 
+                        around Umbarger. The global coordinates of the ranch are 'N 34.992599, W -102.016516'. We choose for the 
+                        location of the ranch in the panhandle because it is rural and great for cattle.
+                    </p>
+                </div>
+                <div class="bored">
+                    <img src='download.png'>
+                </div>
+            </div>
+        </div>
+        <hr class="hr">
+        <hr class="hr">
+            <div>
+
+            </div>
+    </body>
+<html>
